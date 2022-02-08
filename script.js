@@ -63,26 +63,44 @@
 
 // task 5
 
-const vehicles = [
-  { make: "Honda", model: "CR-V", type: "suv", price: 24045 },
-  { make: "Honda", model: "Accord", type: "sedan", price: 22455 },
-  { make: "Mazda", model: "Mazda 6", type: "sedan", price: 24195 },
-  { make: "Mazda", model: "CX-9", type: "suv", price: 31520 },
-  { make: "Toyota", model: "4Runner", type: "suv", price: 34210 },
-  { make: "Toyota", model: "Sequoia", type: "SUV", price: 45560 },
-  { make: "Toyota", model: "Tacoma", type: "truck", price: 24320 },
-  { make: "Ford", model: "F-150", type: "truck", price: 27110 },
-  { make: "Ford", model: "Fusion", type: "sedan", price: 22120 },
-  { make: "Ford", model: "Explorer", type: "SUV", price: 31660 },
-];
+// const vehicles = [
+//   { make: "Honda", model: "CR-V", type: "suv", price: 24045 },
+//   { make: "Honda", model: "Accord", type: "sedan", price: 22455 },
+//   { make: "Mazda", model: "Mazda 6", type: "sedan", price: 24195 },
+//   { make: "Mazda", model: "CX-9", type: "suv", price: 31520 },
+//   { make: "Toyota", model: "4Runner", type: "suv", price: 34210 },
+//   { make: "Toyota", model: "Sequoia", type: "SUV", price: 45560 },
+//   { make: "Toyota", model: "Tacoma", type: "truck", price: 24320 },
+//   { make: "Ford", model: "F-150", type: "truck", price: 27110 },
+//   { make: "Ford", model: "Fusion", type: "sedan", price: 22120 },
+//   { make: "Ford", model: "Explorer", type: "SUV", price: 31660 },
+// ];
 
-const suvType = vehicles.filter(function (vehicle) {
-  return vehicle.type == "suv" || vehicle.type == "SUV";
-});
-console.log(suvType);
+// const suvType = vehicles.filter(function (vehicle) {
+//   return vehicle.type == "suv" || vehicle.type == "SUV";
+// });
+// console.log(suvType);
 
-const suvPriceArray = suvType.map(({ price }) => price);
-const suvPrice = suvPriceArray.reduce(function (item, index) {
-  return item + index / suvPriceArray.length;
-}, 0);
-console.log(suvPrice);
+// const suvPriceArray = suvType.map(({ price }) => price);
+// const suvPrice = suvPriceArray.reduce(function (item, index) {
+//   return item + index / suvPriceArray.length;
+// }, 0);
+// console.log(suvPrice);
+
+// task 6
+
+// let arr = [10, 20, 3, 4, 0, 99, 97];
+// let sorted = copySorted(arr);
+
+// console.log(arr); // [10, 20, 3, 4, 0, 99, 97] - массив не должен изменится!
+// console.log(sorted); // [0, 3, 4, 10, 20, 97, 99]
+function copySorted(arr) {
+  return arr.slice().sort((a, b) => a - b);
+}
+
+let arr = [10, 20, 3, 4, 0, 99, 97];
+
+let sorted = copySorted(arr);
+
+console.log(arr); // [10, 20, 3, 4, 0, 99, 97] - массив не должен изменится!
+console.log(sorted); // [0, 3, 4, 10, 20, 97, 99]
