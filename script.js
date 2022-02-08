@@ -54,11 +54,42 @@ students.forEach(function (student) {
   student.averageMark = averageMark;
 });
 console.log(students);
-const arrayOfAverage = students.map((item) => {
-  students.averageMark + " ";
-  const array = students.map(({ averageMark }) => averageMark);
-  const averageOfAllStudents = array.reduce(function (item, index) {
-    return item + index / array.length;
-  }, 0);
-  console.log(averageOfAllStudents);
-});
+
+const array = students.map(({ averageMark }) => averageMark);
+const averageOfAllStudents = array.reduce(function (item, index) {
+  return item + index / array.length;
+}, 0);
+console.log(averageOfAllStudents);
+
+// task 5
+
+// const vehicles = [
+//   { make: "Honda", model: "CR-V", type: "suv", price: 24045 },
+//   { make: "Honda", model: "Accord", type: "sedan", price: 22455 },
+//   { make: "Mazda", model: "Mazda 6", type: "sedan", price: 24195 },
+//   { make: "Mazda", model: "CX-9", type: "suv", price: 31520 },
+//   { make: "Toyota", model: "4Runner", type: "suv", price: 34210 },
+//   { make: "Toyota", model: "Sequoia", type: "SUV", price: 45560 },
+//   { make: "Toyota", model: "Tacoma", type: "truck", price: 24320 },
+//   { make: "Ford", model: "F-150", type: "truck", price: 27110 },
+//   { make: "Ford", model: "Fusion", type: "sedan", price: 22120 },
+//   { make: "Ford", model: "Explorer", type: "SUV", price: 31660 },
+// ];
+// const suvType = vehicles.filter(function (vehicle) {
+//   return vehicle.type == "suv" || vehicle.type == "SUV";
+// });
+// console.log(suvType);
+
+// const suvPriceArray = suvType.map((item) => {
+//     vehicles.price + " ";
+
+// })
+
+// const arrayOfAverage = students.map((item) => {
+//       students.averageMark + " ";
+//       const array = students.map(({ averageMark }) => averageMark);
+//       const averageOfAllStudents = array.reduce(function (item, index) {
+//         return item + index / array.length;
+//       }, 0);
+//       console.log(averageOfAllStudents);
+//     });
