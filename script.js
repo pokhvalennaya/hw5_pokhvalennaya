@@ -92,15 +92,17 @@
 // let arr = [10, 20, 3, 4, 0, 99, 97];
 // let sorted = copySorted(arr);
 
+// function copySorted(arr) {
+//     return arr.slice().sort((a, b) => a - b);
+//   }
+
 // console.log(arr); // [10, 20, 3, 4, 0, 99, 97] - массив не должен изменится!
 // console.log(sorted); // [0, 3, 4, 10, 20, 97, 99]
-function copySorted(arr) {
-  return arr.slice().sort((a, b) => a - b);
-}
 
-let arr = [10, 20, 3, 4, 0, 99, 97];
+// task 7
 
-let sorted = copySorted(arr);
+const getKeysCount = (obj) => Object.keys(obj).length;
 
-console.log(arr); // [10, 20, 3, 4, 0, 99, 97] - массив не должен изменится!
-console.log(sorted); // [0, 3, 4, 10, 20, 97, 99]
+console.log(getKeysCount({ name: "John" })); // 1
+console.log(getKeysCount({ name: "John", age: 22 })); // 2
+console.log(getKeysCount({ name: "John", salary: null })); // 2
